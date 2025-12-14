@@ -4185,3 +4185,72 @@ java.lang.NullPointerException: Cannot read the array length because "magicBytes
 2025-12-14 18:37:46.611 [JavaFX Application Thread] INFO  com.fileanalyzer.service.DatabaseService - DatabaseService инициализирован. Загружено 9 типов файлов
 2025-12-14 18:37:46.612 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileAnalyzerService - FileAnalyzerService инициализирован
 2025-12-14 18:37:46.823 [JavaFX Application Thread] INFO  com.fileanalyzer.controller.MainController - MainController initialized
+2025-12-14 19:47:07.981 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.DatabaseService - РЈСЃРїРµС€РЅРѕ Р·Р°РіСЂСѓР¶РµРЅС‹ С‚РёРїС‹ С„Р°Р№Р»РѕРІ РёР· JSON
+2025-12-14 19:47:07.993 [JavaFX Application Thread] INFO  com.fileanalyzer.service.DatabaseService - DatabaseService РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅ. Р—Р°РіСЂСѓР¶РµРЅРѕ 9 С‚РёРїРѕРІ С„Р°Р№Р»РѕРІ
+2025-12-14 19:47:08.017 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileAnalyzerService - FileAnalyzerService РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅ
+2025-12-14 19:47:08.347 [JavaFX Application Thread] INFO  com.fileanalyzer.controller.MainController - MainController initialized
+2025-12-14 19:48:08.817 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.DatabaseService - Успешно загружены типы файлов из JSON
+2025-12-14 19:48:08.830 [JavaFX Application Thread] INFO  com.fileanalyzer.service.DatabaseService - DatabaseService инициализирован. Загружено 9 типов файлов
+2025-12-14 19:48:08.831 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileAnalyzerService - FileAnalyzerService инициализирован
+2025-12-14 19:48:09.033 [JavaFX Application Thread] INFO  com.fileanalyzer.controller.MainController - MainController initialized
+2025-12-14 19:48:21.201 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-image
+2025-12-14 19:48:25.979 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileRestoreService - Расширение восстановлено: test-image -> test-image.jpg
+2025-12-14 19:48:43.251 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-picture
+2025-12-14 19:48:46.185 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileRestoreService - Расширение восстановлено: test-picture -> test-picture.png
+2025-12-14 19:48:52.675 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-unknown
+2025-12-14 19:49:54.098 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.DatabaseService - РЈСЃРїРµС€РЅРѕ Р·Р°РіСЂСѓР¶РµРЅС‹ С‚РёРїС‹ С„Р°Р№Р»РѕРІ РёР· JSON
+2025-12-14 19:49:54.106 [JavaFX Application Thread] INFO  com.fileanalyzer.service.DatabaseService - DatabaseService РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅ. Р—Р°РіСЂСѓР¶РµРЅРѕ 9 С‚РёРїРѕРІ С„Р°Р№Р»РѕРІ
+2025-12-14 19:49:54.107 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileAnalyzerService - FileAnalyzerService РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅ
+2025-12-14 19:49:54.262 [JavaFX Application Thread] INFO  com.fileanalyzer.controller.MainController - MainController initialized
+2025-12-14 19:50:02.576 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - РќР°С‡РёРЅР°СЋ Р°РЅР°Р»РёР· С„Р°Р№Р»Р°: text
+2025-12-14 19:51:26.918 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.DatabaseService - РЈСЃРїРµС€РЅРѕ Р·Р°РіСЂСѓР¶РµРЅС‹ С‚РёРїС‹ С„Р°Р№Р»РѕРІ РёР· JSON
+2025-12-14 19:51:26.930 [JavaFX Application Thread] INFO  com.fileanalyzer.service.DatabaseService - DatabaseService РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅ. Р—Р°РіСЂСѓР¶РµРЅРѕ 9 С‚РёРїРѕРІ С„Р°Р№Р»РѕРІ
+2025-12-14 19:51:26.930 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileAnalyzerService - FileAnalyzerService РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅ
+2025-12-14 19:51:27.160 [JavaFX Application Thread] INFO  com.fileanalyzer.controller.MainController - MainController initialized
+2025-12-14 19:51:35.786 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - РќР°С‡РёРЅР°СЋ Р°РЅР°Р»РёР· С„Р°Р№Р»Р°: text.txt
+2025-12-14 20:26:44.659 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.DatabaseService - Успешно загружены типы файлов из JSON
+2025-12-14 20:26:44.692 [JavaFX Application Thread] INFO  com.fileanalyzer.service.DatabaseService - DatabaseService инициализирован. Загружено 13 типов файлов
+2025-12-14 20:26:44.694 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileAnalyzerService - FileAnalyzerService инициализирован
+2025-12-14 20:26:45.228 [JavaFX Application Thread] INFO  com.fileanalyzer.controller.MainController - MainController initialized
+2025-12-14 20:28:06.358 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-docx-document.docx
+2025-12-14 20:28:47.866 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-pdf-document.pdf
+2025-12-14 20:29:32.558 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-mp4-video.mp4
+2025-12-14 20:29:51.089 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-zip-archive.zip
+2025-12-14 20:30:10.571 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-image
+2025-12-14 20:30:37.583 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-text.txt
+2025-12-14 20:34:32.786 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.DatabaseService - Успешно загружены типы файлов из JSON
+2025-12-14 20:34:32.812 [JavaFX Application Thread] INFO  com.fileanalyzer.service.DatabaseService - DatabaseService инициализирован. Загружено 13 типов файлов
+2025-12-14 20:34:32.814 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileAnalyzerService - FileAnalyzerService инициализирован
+2025-12-14 20:34:33.332 [JavaFX Application Thread] INFO  com.fileanalyzer.controller.MainController - MainController initialized
+2025-12-14 20:46:03.726 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-docx-document.docx
+2025-12-14 20:46:13.646 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-image
+2025-12-14 20:46:30.919 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-mp4-video.mp4
+2025-12-14 20:46:48.706 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-music
+2025-12-14 20:47:02.717 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-pdf-document.pdf
+2025-12-14 20:47:27.289 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-picture
+2025-12-14 20:47:41.160 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-text.txt
+2025-12-14 20:48:54.637 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-unknown
+2025-12-14 20:49:11.284 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-zip-archive.zip
+2025-12-14 20:59:18.706 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.DatabaseService - Успешно загружены типы файлов из JSON
+2025-12-14 20:59:18.726 [JavaFX Application Thread] INFO  com.fileanalyzer.service.DatabaseService - DatabaseService инициализирован. Загружено 7 типов файлов
+2025-12-14 20:59:18.728 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileAnalyzerService - FileAnalyzerService инициализирован
+2025-12-14 20:59:19.207 [JavaFX Application Thread] INFO  com.fileanalyzer.controller.MainController - MainController initialized
+2025-12-14 21:00:46.976 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-docx-document.docx
+2025-12-14 21:00:54.858 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-image.jpg
+2025-12-14 21:01:03.936 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-zip-archive.zip
+2025-12-14 21:01:12.273 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-mp4-video.mp4
+2025-12-14 21:01:22.610 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-picture
+2025-12-14 21:02:00.113 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.DatabaseService - Успешно загружены типы файлов из JSON
+2025-12-14 21:02:00.119 [JavaFX Application Thread] INFO  com.fileanalyzer.service.DatabaseService - DatabaseService инициализирован. Загружено 7 типов файлов
+2025-12-14 21:02:00.120 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileAnalyzerService - FileAnalyzerService инициализирован
+2025-12-14 21:02:00.231 [JavaFX Application Thread] INFO  com.fileanalyzer.controller.MainController - MainController initialized
+2025-12-14 21:03:06.203 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-image
+2025-12-14 21:03:30.058 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileRestoreService - Расширение восстановлено: test-image -> test-image.jpg
+2025-12-14 21:04:18.697 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-music
+2025-12-14 21:06:16.857 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileRestoreService - Расширение восстановлено: test-music -> test-music.mp3
+2025-12-14 21:13:47.730 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.FileAnalyzerService - Начинаю анализ файла: test-docx-document
+2025-12-14 21:13:50.271 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileRestoreService - Расширение восстановлено: test-docx-document -> test-docx-document.zip
+2025-12-14 21:43:30.155 [JavaFX Application Thread] DEBUG com.fileanalyzer.service.DatabaseService - Успешно загружены типы файлов из JSON
+2025-12-14 21:43:30.163 [JavaFX Application Thread] INFO  com.fileanalyzer.service.DatabaseService - DatabaseService инициализирован. Загружено 7 типов файлов
+2025-12-14 21:43:30.163 [JavaFX Application Thread] INFO  com.fileanalyzer.service.FileAnalyzerService - FileAnalyzerService инициализирован
+2025-12-14 21:43:30.334 [JavaFX Application Thread] INFO  com.fileanalyzer.controller.MainController - MainController initialized

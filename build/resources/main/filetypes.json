@@ -40,74 +40,12 @@
     ]
   },
   {
-    "extension": "jpeg",
-    "description": "JPEG - популярный формат сжатия изображений (расширение .jpeg)",
-    "magicNumbers": [
-      {
-        "offset": 0,
-        "hex": "FF D8 FF E0"
-      },
-      {
-        "offset": 0,
-        "hex": "FF D8 FF E1"
-      },
-      {
-        "offset": 0,
-        "hex": "FF D8 FF E2"
-      },
-      {
-        "offset": 0,
-        "hex": "FF D8 FF E3"
-      },
-      {
-        "offset": 0,
-        "hex": "FF D8 FF E8"
-      },
-      {
-        "offset": 0,
-        "hex": "FF D8 FF DB"
-      }
-    ]
-  },
-  {
     "extension": "pdf",
     "description": "Adobe Portable Document Format - формат электронных документов",
     "magicNumbers": [
       {
         "offset": 0,
         "hex": "25 50 44 46"
-      }
-    ]
-  },
-  {
-    "extension": "zip",
-    "description": "ZIP - формат сжатия данных и архивации файлов",
-    "magicNumbers": [
-      {
-        "offset": 0,
-        "hex": "50 4B 03 04"
-      },
-      {
-        "offset": 0,
-        "hex": "50 4B 05 06"
-      },
-      {
-        "offset": 0,
-        "hex": "50 4B 07 08"
-      }
-    ]
-  },
-  {
-    "extension": "gif",
-    "description": "Graphics Interchange Format - формат растровых изображений",
-    "magicNumbers": [
-      {
-        "offset": 0,
-        "hex": "47 49 46 38 37 61"
-      },
-      {
-        "offset": 0,
-        "hex": "47 49 46 38 39 61"
       }
     ]
   },
@@ -126,8 +64,18 @@
     ]
   },
   {
-    "extension": "docx",
-    "description": "Microsoft Word Document (Office Open XML)",
+    "extension": "mp4",
+    "description": "MPEG-4 Video - популярный формат видео файлов",
+    "magicNumbers": [
+      {
+        "offset": 4,
+        "hex": "66 74 79 70"
+      }
+    ]
+  },
+  {
+    "extension": "zip",
+    "description": "ZIP/DOCX - архивы и документы Office (одинаковые магические числа)",
     "magicNumbers": [
       {
         "offset": 0,

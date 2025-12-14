@@ -9,8 +9,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * Главный класс приложения для анализа и восстановления расширений файлов.
- * Запускает JavaFX приложение с графическим интерфейсом.
+ * Основной класс приложения File Analyzer.
+ * Реализует функционал определения типов файлов по содержимому.
  */
 public class App extends Application {
 

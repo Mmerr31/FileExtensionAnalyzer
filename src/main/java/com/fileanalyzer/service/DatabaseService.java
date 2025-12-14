@@ -87,11 +87,20 @@ public class DatabaseService {
         }
 
         // Используем Stream API для поиска (требование задания)
-        return fileTypes.stream()
+        Optional<FileType> result = fileTypes.stream()
                 .filter(FileType::hasMagicNumbers)
                 .filter(fileType -> fileType.getMagicNumbers().stream()
                         .anyMatch(magic -> matchesMagicNumber(fileHeader, length, magic)))
                 .findFirst();
+
+        // Если не найден тип по магическим числам, возвращаем TXT как fallback
+        if (result.isEmpty()) {
+            return fileTypes.stream()
+                    .filter(fileType -> "txt".equals(fileType.getExtension()))
+                    .findFirst();
+        }
+
+        return result;
     }
 
     /**
