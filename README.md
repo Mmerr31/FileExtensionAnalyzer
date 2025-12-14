@@ -1,5 +1,12 @@
 # File Analyzer - Определение и восстановление расширений файлов
 
+[![Java](https://img.shields.io/badge/Java-11+-orange.svg)](https://www.oracle.com/java/)
+[![JavaFX](https://img.shields.io/badge/JavaFX-17-blue.svg)](https://openjfx.io/)
+[![Gradle](https://img.shields.io/badge/Gradle-8.14-green.svg)](https://gradle.org/)
+
+## 🔗 GitHub Repository
+**Ссылка на проект:** [https://github.com/Mmerr31/FileAnalyzer](https://github.com/Mmerr31/FileAnalyzer)
+
 ## Описание проекта
 Программа для определения типа файла по его содержимому и восстановления утерянного расширения.
 Использует базу данных типов файлов, их расширений и "магических чисел".
