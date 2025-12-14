@@ -1,0 +1,50 @@
+/* Основные стили */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.button {
+    -fx-cursor: hand;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-font-size: 14px;
+}
+
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+}
+
+.text-field {
+    -fx-border-color: #ddd;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 8px;
+}
+
+.text-area {
+    -fx-border-color: #ddd;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.label {
+    -fx-font-size: 14px;
+}
+
+/* Специфичные стили для состояний */
+.success {
+    -fx-text-fill: #27ae60;
+}
+
+.error {
+    -fx-text-fill: #c0392b;
+}
+
+.warning {
+    -fx-text-fill: #f39c12;
+}
+
+.info {
+    -fx-text-fill: #3498db;
+}

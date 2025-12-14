@@ -1,0 +1,143 @@
+[
+  {
+    "extension": "png",
+    "description": "Portable Network Graphics - растровый формат хранения графической информации",
+    "magicNumbers": [
+      {
+        "offset": 0,
+        "hex": "89 50 4E 47 0D 0A 1A 0A"
+      }
+    ]
+  },
+  {
+    "extension": "jpg",
+    "description": "JPEG - популярный формат сжатия изображений",
+    "magicNumbers": [
+      {
+        "offset": 0,
+        "hex": "FF D8 FF E0"
+      },
+      {
+        "offset": 0,
+        "hex": "FF D8 FF E1"
+      },
+      {
+        "offset": 0,
+        "hex": "FF D8 FF E2"
+      },
+      {
+        "offset": 0,
+        "hex": "FF D8 FF E3"
+      },
+      {
+        "offset": 0,
+        "hex": "FF D8 FF E8"
+      },
+      {
+        "offset": 0,
+        "hex": "FF D8 FF DB"
+      }
+    ]
+  },
+  {
+    "extension": "jpeg",
+    "description": "JPEG - популярный формат сжатия изображений (расширение .jpeg)",
+    "magicNumbers": [
+      {
+        "offset": 0,
+        "hex": "FF D8 FF E0"
+      },
+      {
+        "offset": 0,
+        "hex": "FF D8 FF E1"
+      },
+      {
+        "offset": 0,
+        "hex": "FF D8 FF E2"
+      },
+      {
+        "offset": 0,
+        "hex": "FF D8 FF E3"
+      },
+      {
+        "offset": 0,
+        "hex": "FF D8 FF E8"
+      },
+      {
+        "offset": 0,
+        "hex": "FF D8 FF DB"
+      }
+    ]
+  },
+  {
+    "extension": "pdf",
+    "description": "Adobe Portable Document Format - формат электронных документов",
+    "magicNumbers": [
+      {
+        "offset": 0,
+        "hex": "25 50 44 46"
+      }
+    ]
+  },
+  {
+    "extension": "zip",
+    "description": "ZIP - формат сжатия данных и архивации файлов",
+    "magicNumbers": [
+      {
+        "offset": 0,
+        "hex": "50 4B 03 04"
+      },
+      {
+        "offset": 0,
+        "hex": "50 4B 05 06"
+      },
+      {
+        "offset": 0,
+        "hex": "50 4B 07 08"
+      }
+    ]
+  },
+  {
+    "extension": "gif",
+    "description": "Graphics Interchange Format - формат растровых изображений",
+    "magicNumbers": [
+      {
+        "offset": 0,
+        "hex": "47 49 46 38 37 61"
+      },
+      {
+        "offset": 0,
+        "hex": "47 49 46 38 39 61"
+      }
+    ]
+  },
+  {
+    "extension": "mp3",
+    "description": "MPEG-1 Audio Layer III - формат цифрового кодирования звуковой информации",
+    "magicNumbers": [
+      {
+        "offset": 0,
+        "hex": "49 44 33"
+      },
+      {
+        "offset": 0,
+        "hex": "FF FB"
+      }
+    ]
+  },
+  {
+    "extension": "docx",
+    "description": "Microsoft Word Document (Office Open XML)",
+    "magicNumbers": [
+      {
+        "offset": 0,
+        "hex": "50 4B 03 04"
+      }
+    ]
+  },
+  {
+    "extension": "txt",
+    "description": "Текстовый файл",
+    "magicNumbers": []
+  }
+]

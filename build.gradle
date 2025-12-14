@@ -1,0 +1,108 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+group 'com.fileanalyzer'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JavaFX
+    implementation 'org.openjfx:javafx-controls:17.0.6'
+    implementation 'org.openjfx:javafx-fxml:17.0.6'
+
+    // Логирование
+    implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+
+    // JSON обработка (пока не используется, но будет нужна)
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+
+    // Тестирование
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+}
+
+javafx {
+    version = "17"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+run {
+    // Отключаем модули для простого запуска
+    jvmArgs = [
+        '--add-exports', 'javafx.base/com.sun.javafx.runtime=ALL-UNNAMED'
+    ]
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'com.fileanalyzer.App'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.fileanalyzer.App',
+                'Implementation-Version': archiveVersion
+        )
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+// Создаем отдельную задачу для fat JAR
+task fatJar(type: Jar) {
+    archiveClassifier = 'all'
+    manifest {
+        attributes(
+                'Main-Class': 'com.fileanalyzer.App'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    with jar
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+// Создаем JAR с исходниками
+task sourcesJar(type: Jar) {
+    archiveClassifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+// Создаем полный архив проекта
+task projectArchive(type: Zip) {
+    archiveClassifier = 'project'
+    from('.') {
+        exclude 'build/**'
+        exclude '.gradle/**'
+        exclude '.git/**'
+        exclude 'out/**'
+        exclude '*.iml'
+        exclude '.idea/**'
+    }
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
+javadoc {
+    options.encoding = 'UTF-8'
+    options.charSet = 'UTF-8'
+    options.docEncoding = 'UTF-8'
+}

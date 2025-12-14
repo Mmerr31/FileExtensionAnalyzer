@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.fileanalyzer"},{"l":"com.fileanalyzer.controller"},{"l":"com.fileanalyzer.model"},{"l":"com.fileanalyzer.service"},{"l":"com.fileanalyzer.util"},{"l":"com.fileanalyzer.view"}];updateSearchResults();

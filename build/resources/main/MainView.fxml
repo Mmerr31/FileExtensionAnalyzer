@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.fileanalyzer.controller.MainController"
+      spacing="15"
+      style="-fx-background-color: #f4f4f4;"
+      prefWidth="800"
+      prefHeight="600">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Заголовок -->
+    <Label text="File Analyzer">
+        <font>
+            <Font name="System Bold" size="24"/>
+        </font>
+    </Label>
+
+    <Label text="Определение типа файла по содержимому и восстановление расширения"/>
+
+    <Separator/>
+
+    <!-- Выбор файла -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Файл:" minWidth="60"/>
+        <TextField fx:id="filePathField" promptText="Выберите файл..."
+                   editable="false" HBox.hgrow="ALWAYS"/>
+        <Button text="Обзор..." fx:id="browseButton"
+                onAction="#handleBrowseButton"/>
+    </HBox>
+
+    <!-- Кнопка анализа и прогресс -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Анализировать файл" fx:id="analyzeButton"
+                onAction="#handleAnalyzeButton"
+                HBox.hgrow="ALWAYS">
+            <padding>
+                <Insets top="10" bottom="10" left="20" right="20"/>
+            </padding>
+        </Button>
+        <ProgressIndicator fx:id="progressIndicator" visible="false" prefWidth="30" prefHeight="30"/>
+    </HBox>
+
+    <!-- Результаты -->
+    <VBox spacing="10" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #ddd;">
+        <Label text="Результаты анализа:" style="-fx-font-weight: bold;"/>
+
+        <GridPane hgap="10" vgap="8">
+            <Label text="Тип файла:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <Label fx:id="fileTypeLabel" text="Не определен" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Расширение:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <Label fx:id="extensionLabel" text="Не определено" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Описание:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <Label fx:id="descriptionLabel" text="-" GridPane.rowIndex="2" GridPane.columnIndex="1" wrapText="true"/>
+        </GridPane>
+    </VBox>
+
+    <!-- Логи -->
+    <VBox spacing="5">
+        <Label text="Логи:" style="-fx-font-weight: bold;"/>
+        <TextArea fx:id="logTextArea" editable="false" prefHeight="150"/>
+    </VBox>
+
+    <!-- Кнопки действий -->
+    <HBox spacing="10">
+        <Button text="Восстановить расширение" fx:id="restoreButton"
+                onAction="#handleRestoreButton"
+                disable="true" HBox.hgrow="ALWAYS"/>
+        <Button text="Информация о файле" fx:id="infoButton"
+                onAction="#handleInfoButton"
+                disable="true"/>
+    </HBox>
+
+</VBox>
