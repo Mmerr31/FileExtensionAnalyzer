@@ -1,0 +1,59 @@
+@startuml FileAnalyzer_UseCaseDiagram
+
+left to right direction
+
+actor "User" as User
+
+rectangle "File Analyzer System" {
+    usecase "Select File" as UC1
+    usecase "Analyze File" as UC2
+    usecase "Restore Extension" as UC3
+    usecase "View File Info" as UC4
+    
+    usecase "Determine File Type" as UC5
+    usecase "Show Analysis Result" as UC6
+    usecase "Create Copy with New Extension" as UC7
+    usecase "Log Operations" as UC8
+    
+    rectangle "Internal Components" {
+        usecase "Load File Types Database" as UC9
+        usecase "Search by Magic Numbers" as UC10
+        usecase "Apply TXT Fallback" as UC11
+    }
+}
+
+User --> UC1 : selects
+User --> UC2 : initiates
+User --> UC3 : requests
+User --> UC4 : views
+
+UC2 ..> UC5 : <<include>>
+UC2 ..> UC6 : <<include>>
+UC2 ..> UC8 : <<include>>
+
+UC3 ..> UC7 : <<include>>
+UC3 ..> UC8 : <<include>>
+
+UC5 ..> UC9 : <<include>>
+UC5 ..> UC10 : <<include>>
+
+UC5 ..> UC11 : <<extend>>
+
+UC3 --> UC2 : <<depends on>>
+UC7 --> UC5 : <<depends on>>
+
+note right of UC2
+Main use case:
+1. Read file
+2. Analyze magic numbers
+3. Determine type
+4. Display result
+end note
+
+note right of UC11
+If file type not found
+by magic numbers,
+returns TXT as fallback
+end note
+
+@enduml

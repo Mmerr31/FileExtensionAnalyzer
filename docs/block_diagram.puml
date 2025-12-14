@@ -1,0 +1,62 @@
+@startuml FileAnalyzer_Flowchart
+
+start
+
+:User launches application;
+
+:Main window displays;
+
+:User clicks Browse button;
+
+:File selection dialog opens;
+
+:User selects file;
+
+if (File selected?) then (yes)
+    :File path shows in field;
+    :User clicks Analyze File;
+    
+    if (File exists?) then (yes)
+        :Read first 20 bytes of file;
+        
+        :Search in magic numbers database;
+        note right: Uses Stream API
+        
+        if (Match found?) then (yes)
+            :Return detected file type;
+        else (no)
+            :Apply fallback - return TXT;
+            note right: All files get a type
+        endif
+        
+        :Display result in UI;
+        :Log operation;
+        
+        if (User clicks Restore Extension?) then (yes)
+            if (File type determined?) then (yes)
+                :Generate new filename;
+                :Create copy with correct extension;
+                :Show success notification;
+                :Log restoration;
+            else (no)
+                :Show error Type not determined;
+            endif
+        endif
+        
+        if (User clicks File Info?) then (yes)
+            :Collect file information;
+            :Display in dialog;
+        endif
+        
+    else (no)
+        :Show error File not found;
+    endif
+else (no)
+    :Wait for file selection;
+endif
+
+:User can select another file;
+
+stop
+
+@enduml

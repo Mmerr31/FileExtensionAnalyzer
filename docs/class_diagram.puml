@@ -1,0 +1,88 @@
+@startuml FileAnalyzer_ClassDiagram
+
+class App {
+    +main(String[]): void
+    +start(Stage): void
+}
+
+class MainController {
+    -selectedFile: File
+    -detectedFileType: FileType
+    -databaseService: DatabaseService
+    -fileAnalyzerService: FileAnalyzerService
+    -fileRestoreService: FileRestoreService
+    +initialize(): void
+    +browseFile(): void
+    +analyzeFile(): void
+    +restoreExtension(): void
+    +showFileInfo(): void
+}
+
+class FileType {
+    -extension: String
+    -description: String
+    -magicNumbers: List<MagicNumber>
+    +getExtension(): String
+    +setExtension(String): void
+    +getDescription(): String
+    +setDescription(String): void
+    +getMagicNumbers(): List<MagicNumber>
+    +setMagicNumbers(List<MagicNumber>): void
+    +hasMagicNumbers(): boolean
+}
+
+class MagicNumber {
+    -offset: int
+    -bytes: byte[]
+    -hex: String
+    +getOffset(): int
+    +setOffset(int): void
+    +getBytes(): byte[]
+    +setBytes(byte[]): void
+    +getHex(): String
+    +setHex(String): void
+}
+
+class DatabaseService {
+    -fileTypes: List<FileType>
+    +findFileTypeByMagicNumbers(byte[], int): Optional<FileType>
+    +getAllFileTypes(): List<FileType>
+    -loadFileTypes(): void
+    -matchesMagicNumber(byte[], int, MagicNumber): boolean
+}
+
+class FileAnalyzerService {
+    -databaseService: DatabaseService
+    +analyzeFile(File): Optional<FileType>
+    +isFileTypeDeterminable(File): boolean
+}
+
+class FileRestoreService {
+    +restoreFileExtension(File, FileType): File
+    +generateRestoredFileName(File, String): String
+}
+
+class FileInfoDialog {
+    +showFileInfo(File): void
+}
+
+class FileUtils {
+    +copyFile(File, File): void
+    +getFileExtension(File): String
+}
+
+App --> MainController
+MainController --> DatabaseService
+MainController --> FileAnalyzerService
+MainController --> FileRestoreService
+MainController --> FileInfoDialog
+FileAnalyzerService --> DatabaseService
+FileRestoreService --> FileUtils
+DatabaseService --> FileType
+FileType --> MagicNumber
+
+note right of DatabaseService : Uses Stream API\nfor file type search
+note right of FileType : JSON data model
+note right of MagicNumber : Auto HEX to bytes\nconversion
+
+@enduml
